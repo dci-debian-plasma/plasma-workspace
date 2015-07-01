@@ -361,21 +361,6 @@ Copyright: 2005-2013, Aaron Seigo <aseigo@kde.org>
            2011-2012, Viranch Mehta <viranch.mehta@gmail.com>
            2007, Volker Krause <vkrause@kde.org>
 License: LGPL-2+
- This program is free software; you can redistribute it and/or modify
- it under the terms of the GNU Library General Public License as
- published by the Free Software Foundation; either version 2, or
- (at your option) any later version.
- .
- This program is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- GNU General Public License for more details
- .
- You should have received a copy of the GNU Library General Public
- License along with this program; if not, write to the
- Free Software Foundation, Inc.,
- 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
- .
 
 Files: drkonqi/backtracegenerator.cpp
        drkonqi/backtracegenerator.h
@@ -446,18 +431,6 @@ Files: dataengines/systemmonitor/sensorclient.h
 Copyright: 1999, 2000 Chris Schlaeger <cs@kde.org>
            2006 John Tapsell <tapsell@kde.org>
 License: GPL-2
- This program is free software; you can redistribute it and/or
- modify it under the terms of version 2 of the GNU General Public
- License as published by the Free Software Foundation.
- .
- This program is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- GNU General Public License for more details.
- .
- You should have received a copy of the GNU General Public License
- along with this program; if not, write to the Free Software
- Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 Files: applets/system-monitor/* excluding:
          -applets/system-monitor/monitorbutton.cpp
@@ -655,23 +628,6 @@ Copyright: 2012 Viranch Mehta <viranch.mehta@gmail.com>
            2010 Matthieu Gallien <matthieu_gallien@yahoo.fr>
            2008 Alex Merry <alex.merry@kdemail.net>
 License: LGPL-2+
- This program is free software; you can redistribute it and/or modify
- it under the terms of the GNU Library General Public License as
- published by the Free Software Foundation; either version 2 or
- (at your option) any later version.
- .
- This program is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- GNU Library General Public License for more details
- .
- You should have received a copy of the GNU Library General Public
- License along with this program; if not, write to the
- Free Software Foundation, Inc.,
- 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
- .
- On Debian systems, the complete text of the GNU Library General Public
- License version 2 can be found in "/usr/share/common-licenses/LGPL-2".
 
 Files: applets/system-monitor/applet.cpp
        applets/system-monitor/applet.h
@@ -1243,21 +1199,6 @@ Copyright: 1999-2000, Chris Schlaeger <cs@kde.org>
            2006, John Tapsell <tapsell@kde.org>
            1992-2007, Trolltech ASA
 License: GPL-2
- This program is free software; you can redistribute it and/or
- modify it under the terms of version 2 of the GNU General Public
- License as published by the Free Software Foundation.
- .
- This program is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- GNU General Public License for more details.
- .
- You should have received a copy of the GNU General Public License
- along with this program; if not, write to the Free Software
- Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
- .
- On Debian systems, the complete text of the GNU General Public License
- version 2 can be found in "/usr/share/common-licenses/GPL-2".
 
 Files: klipper/autotests/modeltest.cpp
        klipper/autotests/modeltest.h
@@ -1339,3 +1280,36 @@ License: GPL-2+
  .
  On Debian systems, the complete text of the GNU General Public License
  version 2 can be found in "/usr/share/common-licenses/GPL-2".
+
+License: GPL-2
+ This program is free software; you can redistribute it and/or
+ modify it under the terms of version 2 of the GNU General Public
+ License as published by the Free Software Foundation.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
+License: LGPL-2+
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU Library General Public License as
+ published by the Free Software Foundation; either version 2 or
+ (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU Library General Public License for more details
+ .
+ You should have received a copy of the GNU Library General Public
+ License along with this program; if not, write to the
+ Free Software Foundation, Inc.,
+ 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ .
+ On Debian systems, the complete text of the GNU Library General Public
+ License version 2 can be found in "/usr/share/common-licenses/LGPL-2".
