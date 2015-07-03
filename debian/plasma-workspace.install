@@ -67,7 +67,6 @@ usr/lib/*/qt5/plugins/plasma_containmentactions_switchactivity.so
 usr/lib/*/qt5/plugins/plasma_containmentactions_switchdesktop.so
 usr/lib/*/qt5/plugins/plasma_containmentactions_switchwindow.so
 usr/lib/*/qt5/plugins/screenlocker_kcm.so
-usr/lib/*/qt5/qml/org/kde/plasma/private/battery/
 usr/lib/*/qt5/qml/org/kde/plasma/private/digitalclock/
 usr/lib/*/qt5/qml/org/kde/plasma/private/icon/
 usr/lib/*/qt5/qml/org/kde/plasma/private/notifications/
