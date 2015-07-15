@@ -132,7 +132,12 @@ Depends: dbus-x11,
          ${misc:Depends},
          ${shlibs:Depends}
 Conflicts: kde-window-manager, kde-workspace, kde-workspace-data, klipper
-Replaces: klipper, plasma-workspace-data
+Breaks: kio-extras (<< 4:5.3.2+git20150710.0210),
+        kio-extras-data (<< 4:5.3.2+git20150710.0210)
+Replaces: kio-extras (<< 4:5.3.2+git20150710.0210),
+          kio-extras-data (<< 4:5.3.2+git20150710.0210),
+          klipper,
+          plasma-workspace-data
 Description: Plasma Workspace for KF5
  Plasma Workspace for KF5. Workspaces provide
  support for KDE Plasma Widgets, integrated search,
