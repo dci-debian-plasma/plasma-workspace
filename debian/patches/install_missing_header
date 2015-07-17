@@ -1,8 +1,8 @@
 Index: plasma-workspace/CMakeLists.txt
 ===================================================================
---- plasma-workspace.orig/CMakeLists.txt	2015-02-10 20:28:49.183793069 +0100
-+++ plasma-workspace/CMakeLists.txt	2015-02-10 20:29:26.634292187 +0100
-@@ -101,7 +101,10 @@
+--- plasma-workspace.orig/CMakeLists.txt
++++ plasma-workspace/CMakeLists.txt
+@@ -102,7 +102,10 @@ include_directories("${CMAKE_CURRENT_BIN
  configure_file(config-workspace.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-workspace.h)
  configure_file(config-unix.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-unix.h )
  configure_file(config-X11.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-X11.h)

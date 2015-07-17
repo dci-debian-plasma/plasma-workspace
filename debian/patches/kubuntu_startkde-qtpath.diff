@@ -2,25 +2,23 @@ Description: set path to qtpath
 Forwarded: not-needed
 Origin: vendor
 Author: Jonathan Riddell <jriddell@ubuntu.com>
-Index: plasma-workspace/startkde/startkde.cmake
+Index: plasma-workspace/startkde/CMakeLists.txt
 ===================================================================
-diff --git a/startkde/CMakeLists.txt b/startkde/CMakeLists.txt
-index 6cc1fa3..8beb59c 100644
---- a/startkde/CMakeLists.txt
-+++ b/startkde/CMakeLists.txt
-@@ -7,6 +7,8 @@ if(NOT CMAKE_INSTALL_PREFIX STREQUAL "/usr")
+--- plasma-workspace.orig/startkde/CMakeLists.txt
++++ plasma-workspace/startkde/CMakeLists.txt
+@@ -7,6 +7,8 @@ if(NOT CMAKE_INSTALL_PREFIX STREQUAL "/u
      set(EXPORT_XCURSOR_PATH "XCURSOR_PATH=${CMAKE_INSTALL_PREFIX}/share/icons:$XCURSOR_PATH\":~/.icons:/usr/share/icons:/usr/share/pixmaps:/usr/X11R6/lib/X11/icons\"; export XCURSOR_PATH")
  endif()
  
 +execute_process( COMMAND dpkg-architecture -qDEB_HOST_MULTIARCH OUTPUT_VARIABLE DEB_HOST_MULTIARCH OUTPUT_STRIP_TRAILING_WHITESPACE)
 +
  configure_file(startkde.cmake ${CMAKE_CURRENT_BINARY_DIR}/startkde  @ONLY)
- 
- if(NOT WIN32)
-diff --git a/startkde/startkde.cmake b/startkde/startkde.cmake
-index 2585600..36930fd 100644
---- a/startkde/startkde.cmake
-+++ b/startkde/startkde.cmake
+ configure_file(startplasmacompositor.cmake ${CMAKE_CURRENT_BINARY_DIR}/startplasmacompositor  @ONLY)
+ configure_file(startplasma.cmake ${CMAKE_CURRENT_BINARY_DIR}/startplasma  @ONLY)
+Index: plasma-workspace/startkde/startkde.cmake
+===================================================================
+--- plasma-workspace.orig/startkde/startkde.cmake
++++ plasma-workspace/startkde/startkde.cmake
 @@ -3,6 +3,8 @@
  #  DEFAULT KDE STARTUP SCRIPT ( @PROJECT_VERSION@ )
  #
