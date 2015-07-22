@@ -110,7 +110,6 @@ Depends: dbus-x11,
          kded5,
          kinit,
          kio,
-         kio-extras,
          libkf5globalaccel-bin (>= 5.7.0),
          libkf5service-bin,
          milou,
@@ -132,6 +131,7 @@ Depends: dbus-x11,
          x11-xserver-utils,
          ${misc:Depends},
          ${shlibs:Depends}
+Recommends: kio-extras
 Conflicts: kde-window-manager, kde-workspace, kde-workspace-data, klipper
 Breaks: kio-extras (<< 4:5.3.2+git20150710.0210),
         kio-extras-data (<< 4:5.3.2+git20150710.0210)
