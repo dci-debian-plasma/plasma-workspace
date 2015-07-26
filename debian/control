@@ -87,7 +87,6 @@ Package: plasma-workspace-dev
 Architecture: any
 Depends: libkf5windowsystem-dev (>= 5.4.0),
          plasma-framework-dev (>= 5.8.0~),
-         plasma-workspace (= ${binary:Version}),
          qtbase5-dev (>= 5.4.0~),
          ${allLibraries},
          ${misc:Depends}
