@@ -1,3 +1,9 @@
+plasma-workspace (4:5.3.95-0ubuntu1) UNRELEASED; urgency=medium
+
+  * new upstream beta release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Fri, 07 Aug 2015 18:37:17 +0200
+
 plasma-workspace (4:5.3.2-0ubuntu2) wily; urgency=medium
 
   * Remove plasma-workspace dependency from plasma-workspace-dev, the
