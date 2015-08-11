@@ -1,6 +1,6 @@
 plasma-workspace (4:5.3.95-0ubuntu2) UNRELEASED; urgency=medium
 
-  * Tighten build-dep version on plasma-framework
+  * Tighten build-dep version on plasma-framework and activities
 
  -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 11 Aug 2015 22:56:55 +0200
 
