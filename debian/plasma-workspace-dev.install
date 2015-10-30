@@ -8,6 +8,7 @@ usr/lib/*/cmake/KSMServerDBusInterface/KSMServerDBusInterfaceConfig.cmake
 usr/lib/*/cmake/LibKWorkspace/
 usr/lib/*/cmake/LibTaskManager/
 usr/lib/*/cmake/ScreenSaverDBusInterface/ScreenSaverDBusInterfaceConfig.cmake
+usr/lib/*/libksld.so
 usr/lib/*/libkworkspace5.so
 usr/lib/*/libplasma-geolocation-interface.so
 usr/lib/*/libtaskmanager.so
