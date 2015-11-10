@@ -13,7 +13,6 @@ usr/lib/*/libplasma-geolocation-interface.so
 usr/lib/*/libtaskmanager.so
 usr/lib/*/libweather_ion.so
 usr/share/dbus-1/interfaces/com.canonical.AppMenu.Registrar.xml
-usr/share/dbus-1/interfaces/kf5_org.freedesktop.ScreenSaver.xml
 usr/share/dbus-1/interfaces/org.kde.KSMServerInterface.xml
 usr/share/dbus-1/interfaces/org.kde.KSplash.xml
 usr/share/dbus-1/interfaces/org.kde.PlasmaShell.xml
