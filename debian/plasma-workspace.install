@@ -86,7 +86,6 @@ usr/share/kio_desktop/DesktopLinks/Home.desktop
 usr/share/kio_desktop/directory.desktop
 usr/share/kio_desktop/directory.trash
 usr/share/knotifications5/freespacenotifier.notifyrc
-usr/share/knotifications5/ksmserver.notifyrc
 usr/share/knotifications5/phonon.notifyrc
 usr/share/kservices5/applications.protocol
 usr/share/kservices5/desktop.protocol
