@@ -6,7 +6,7 @@ include /usr/share/pkg-kde-tools/qt-kde-team/2/library-packages.mk
 
 override_dh_auto_test:
 	PYBUILD_TEST_ARGS="export `dbus-launch`"\
-	dh_auto_test
+	$(overridden_command)
 
 override_dh_strip:
 	$(overridden_command) --dbg-package=plasma-workspace-dbg
@@ -18,4 +18,4 @@ override_dh_fixperms:
 override_dh_install:
 	mkdir -p debian/plasma-workspace/usr/share/lightdm/lightdm.conf.d/
 	cp debian/40-kde-plasma-kf5.conf debian/plasma-workspace/usr/share/lightdm/lightdm.conf.d/
-	dh_install
+	$(overridden_command)
