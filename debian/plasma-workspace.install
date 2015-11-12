@@ -240,7 +240,6 @@ usr/share/locale/*/*/plasmashellprivateplugin.mo
 usr/share/locale/*/*/soliduiserver.mo
 usr/share/locale/*/*/systemmonitor.mo
 usr/share/locale/*/LC_MESSAGES/plasma_engine_devicenotifications.mo
-usr/share/plasma/kcms/
 usr/share/plasma/look-and-feel/
 usr/share/plasma/plasmoids/
 usr/share/plasma/services/
