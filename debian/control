@@ -174,17 +174,6 @@ Description: Plasma Workspace for KF5 library
  .
  This package contains library files.
 
-Package: libksld5
-Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}
-Description: Plasma Workspace for KF5 library
- Plasma Workspace for KF5. Workspaces provide
- support for KDE Plasma Widgets, integrated search,
- hardware management and a high degree of customizability.
- Screenlocker library.
- .
- This package contains library files.
-
 Package: libplasma-geolocation-interface5
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
