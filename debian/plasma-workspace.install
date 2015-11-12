@@ -82,7 +82,6 @@ usr/share/desktop-directories/
 usr/share/doc/HTML/*/kcontrol/
 usr/share/doc/HTML/*/klipper/
 usr/share/drkonqi/
-usr/share/kconf_update/ksreenlocker_5_3_separate_autologin.pl
 usr/share/kio_desktop/DesktopLinks/Home.desktop
 usr/share/kio_desktop/directory.desktop
 usr/share/kio_desktop/directory.trash
