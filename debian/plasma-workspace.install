@@ -1,6 +1,7 @@
 etc/xdg/autostart/krunner.desktop
 etc/xdg/autostart/org.kde.klipper.desktop
 etc/xdg/autostart/plasmashell.desktop
+etc/xdg/autostart/xembedsniproxy.desktop
 etc/xdg/plasmoids.knsrc
 etc/xdg/taskmanagerrulesrc
 etc/xdg/wallpaper.knsrc
@@ -18,6 +19,7 @@ usr/bin/plasmashell
 usr/bin/plasmawindowed
 usr/bin/startkde
 usr/bin/systemmonitor
+usr/bin/xembedsniproxy
 usr/lib/*/libexec/drkonqi
 usr/lib/*/libexec/ksyncdbusenv
 usr/lib/*/libkdeinit5_kcminit.so
@@ -69,6 +71,8 @@ usr/lib/*/qt5/plugins/plasma_containmentactions_switchwindow.so
 usr/lib/*/qt5/qml/org/kde/plasma/private/digitalclock/
 usr/lib/*/qt5/qml/org/kde/plasma/private/icon/
 usr/lib/*/qt5/qml/org/kde/plasma/private/notifications/
+usr/lib/*/qt5/qml/org/kde/plasma/private/sessions/libsessionsprivateplugin.so
+usr/lib/*/qt5/qml/org/kde/plasma/private/sessions/qmldir
 usr/lib/*/qt5/qml/org/kde/plasma/private/shell/
 usr/lib/*/qt5/qml/org/kde/plasma/wallpapers/image/
 usr/lib/*/qt5/qml/org/kde/plasma/workspace/
