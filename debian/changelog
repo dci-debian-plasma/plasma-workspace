@@ -1,6 +1,7 @@
-plasma-workspace (4:5.5.1) UNRELEASED; urgency=medium
+plasma-workspace (4:5.5.1.1) UNRELEASED; urgency=medium
 
   * New upstream release Xenial. 
+  * Upstream version bumped by 1. 
 
  -- Scarlett Clark <sgclark@kubuntu.org>  Fri, 18 Dec 2015 10:26:30 -0800
 
