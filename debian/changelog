@@ -1,14 +1,8 @@
-plasma-workspace (4:5.5.1.1) UNRELEASED; urgency=medium
-
-  * Tarball upstream version difference.
-
- -- Scarlett Clark <sgclark@kubuntu.org>  Fri, 18 Dec 2015 10:26:30 -0800
-
 plasma-workspace (4:5.5.1) UNRELEASED; urgency=medium
 
-  * New upstream release Xenial
+  * New upstream release Xenial. 
 
- -- Philip Muškovac <yofel@kubuntu.org>  Fri, 18 Dec 2015 10:22:40 -0800
+ -- Scarlett Clark <sgclark@kubuntu.org>  Fri, 18 Dec 2015 10:26:30 -0800
 
 plasma-workspace (4:5.4.3-0ubuntu1) xenial; urgency=medium
 
