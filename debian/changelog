@@ -9,6 +9,9 @@ plasma-workspace (4:5.5.2-0ubuntu1) UNRELEASED; urgency=medium
 
   [ Clive Johnston ]
   * new upstream release
+  * Removing a file from plasma-workspace.install which is no longer built
+  * Adding missing file usr/share/wayland-sessions/plasmawayland.desktop
+    into plasma-workspace-wayland.install
 
  -- Clive Johnston <clivejo@aol.com>  Tue, 29 Dec 2015 17:54:26 +0000
 
