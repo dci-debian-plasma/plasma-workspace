@@ -1,4 +1,4 @@
-plasma-workspace (4:5.5.2-0ubuntu1) UNRELEASED; urgency=medium
+plasma-workspace (4:5.5.3-0ubuntu1) UNRELEASED; urgency=medium
 
   [ Scarlett Clark ]
   * New upstream release Xenial. 
@@ -12,8 +12,9 @@ plasma-workspace (4:5.5.2-0ubuntu1) UNRELEASED; urgency=medium
   * Removing a file from plasma-workspace.install which is no longer built
   * Adding missing file usr/share/wayland-sessions/plasmawayland.desktop
     into plasma-workspace-wayland.install
+  * New upstream release
 
- -- Clive Johnston <clivejo@aol.com>  Tue, 29 Dec 2015 17:54:26 +0000
+ -- Clive Johnston <clivejo@aol.com>  Thu, 07 Jan 2016 18:02:18 +0000
 
 plasma-workspace (4:5.4.3-0ubuntu1) xenial; urgency=medium
 
