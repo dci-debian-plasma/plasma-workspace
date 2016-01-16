@@ -1310,6 +1310,7 @@ License: BSD-2-clause_and_GPL-2+
 Files: debian/*
 Copyright: 2014, Jonathan Riddell <jriddell@ubuntu.com>
            2014, Scarlett Clark <scarlett@scarlettgatelyclark.com>
+           2016, Philip Muskovac <yofel@gmx.net>
 License: GPL-2+
 
 License: BSD-2-clause
