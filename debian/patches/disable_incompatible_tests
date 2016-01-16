@@ -11,16 +11,3 @@ Index: plasma-workspace/kioslave/desktop/tests/CMakeLists.txt
 +# ecm_mark_as_test(testdesktop)
 +# add_test(testdesktop testdesktop)
  
-Index: plasma-workspace/ksmserver/screenlocker/autotests/lockwindowtest.cpp
-===================================================================
---- plasma-workspace.orig/ksmserver/screenlocker/autotests/lockwindowtest.cpp	2015-09-04 09:33:27.384852657 +0200
-+++ plasma-workspace/ksmserver/screenlocker/autotests/lockwindowtest.cpp	2015-09-04 12:58:42.826700134 +0200
-@@ -142,7 +142,7 @@
-     xcb_configure_window(c, widgetWindow.winId(), XCB_CONFIG_WINDOW_STACK_MODE, values);
-     xcb_flush(c);
-     QTest::qWait(1000);
--    QVERIFY(isBlack());
-+    // QVERIFY(isBlack());
- 
-     lockWindow.hideLockWindow();
- }
