@@ -6,6 +6,7 @@ plasma-workspace (4:5.5.4-0ubuntu1) UNRELEASED; urgency=medium
   * Version number is coming up None. Trying a different approach 
     with appending a. 
   * Silly me, lost the ubuntu in the version. Final fix I hope.
+  * Merge xenial_archive manual.
 
   [ Clive Johnston ]
   * new upstream release
@@ -14,16 +15,8 @@ plasma-workspace (4:5.5.4-0ubuntu1) UNRELEASED; urgency=medium
     into plasma-workspace-wayland.install
   * New upstream release
 
-<<<<<<< HEAD
   [ Philip Muškovac ]
   * Merge with debian git master 
-=======
-  [ Scarlett Clark ]
-  * Merge xenial_archive manual. 
->>>>>>> origin/kubuntu_stable
-
-  [ Clive Johnston ]
-  * New upstream release
 
  -- Clive Johnston <clivejo@aol.com>  Wed, 27 Jan 2016 20:19:19 +0000
 
