@@ -17,8 +17,8 @@ Index: plasma-workspace/startkde/CMakeLists.txt
  configure_file(startplasma.cmake ${CMAKE_CURRENT_BINARY_DIR}/startplasma  @ONLY)
 Index: plasma-workspace/startkde/startkde.cmake
 ===================================================================
---- plasma-workspace.orig/startkde/startkde.cmake
-+++ plasma-workspace/startkde/startkde.cmake
+--- plasma-workspace.orig/startkde/startkde.cmake	2015-09-04 09:36:58.624473064 +0200
++++ plasma-workspace/startkde/startkde.cmake	2015-09-04 09:36:58.620473223 +0200
 @@ -3,6 +3,8 @@
  #  DEFAULT KDE STARTUP SCRIPT ( @PROJECT_VERSION@ )
  #
@@ -37,7 +37,7 @@ Index: plasma-workspace/startkde/startkde.cmake
    qdbus=$qbindir/qdbus
    case $PATH in
      $bindir|$bindir:*|*:$bindir|*:$bindir:*) ;;
-@@ -201,7 +203,7 @@ fi
+@@ -201,7 +203,7 @@
  # better use the Autostart folder.
  
  # TODO: Use GenericConfigLocation once we depend on Qt 5.4
