@@ -59,6 +59,8 @@ usr/lib/*/qt5/plugins/krunner_windows.so
 usr/lib/*/qt5/plugins/phonon_platform/kde.so
 usr/lib/*/qt5/plugins/plasma-geolocation-gps.so
 usr/lib/*/qt5/plugins/plasma-geolocation-ip.so
+usr/lib/*/qt5/plugins/plasma/applets/org.kde.plasma.private.systemtray.so
+usr/lib/*/qt5/plugins/plasma/applets/org.kde.plasma.systemtray.so
 usr/lib/*/qt5/plugins/plasma/dataengine/
 usr/lib/*/qt5/plugins/plasma/packagestructure/
 usr/lib/*/qt5/plugins/plasma_applet_notifications.so
@@ -76,7 +78,6 @@ usr/lib/*/qt5/qml/org/kde/plasma/private/sessions/qmldir
 usr/lib/*/qt5/qml/org/kde/plasma/private/shell/
 usr/lib/*/qt5/qml/org/kde/plasma/wallpapers/image/
 usr/lib/*/qt5/qml/org/kde/plasma/workspace/
-usr/lib/*/qt5/qml/org/kde/private/systemtray/
 usr/share/applications/org.kde.klipper.desktop
 usr/share/applications/plasma-windowed.desktop
 usr/share/config.kcfg/freespacenotifier.kcfg
@@ -109,6 +110,7 @@ usr/share/kservices5/plasma-applet-org.kde.plasma.lock_logout.desktop
 usr/share/kservices5/plasma-applet-org.kde.plasma.mediacontroller.desktop
 usr/share/kservices5/plasma-applet-org.kde.plasma.notifications.desktop
 usr/share/kservices5/plasma-applet-org.kde.plasma.panelspacer.desktop
+usr/share/kservices5/plasma-applet-org.kde.plasma.private.systemtray.desktop
 usr/share/kservices5/plasma-applet-org.kde.plasma.systemmonitor.*.desktop
 usr/share/kservices5/plasma-applet-org.kde.plasma.systemtray.desktop
 usr/share/kservices5/plasma-containmentactions-applauncher.desktop
