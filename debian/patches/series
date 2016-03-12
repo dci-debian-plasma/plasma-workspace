@@ -1,3 +1,4 @@
 kubuntu_startkde-qtpath.diff
 install_missing_header
 disable_incompatible_tests
+plasma_applet_actions_crash.diff

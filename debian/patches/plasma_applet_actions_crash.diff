@@ -1,0 +1,36 @@
+From: David Edmundson <kde@davidedmundson.co.uk>
+Date: Mon, 01 Feb 2016 23:06:48 +0000
+Subject: Fix the Plasma::Applet::Actions crash
+X-Git-Url: http://quickgit.kde.org/?p=plasma-workspace.git&a=commitdiff&h=5a1a411b41f950e97d80ff7c898052fb6d02fb1a
+---
+Fix the Plasma::Applet::Actions crash
+
+We were mixing KScreen and QScreen API.
+
+Corona.cpp checks we are requesting a containment for a valid screen
+if (screen >= 0 && screen < numScreens()) {
+
+This fails as numScreens() is Qt API based, whereas the signal we're
+adding the output for is ShellCorona::addOutput
+
+BUG: 351777
+REVIEW: 126961
+---
+
+
+--- a/shell/shellcorona.cpp
++++ b/shell/shellcorona.cpp
+@@ -630,7 +630,11 @@
+ 
+ int ShellCorona::numScreens() const
+ {
+-    return QGuiApplication::screens().count();
++    //don't start loading screens until kscreen has finished initialising.
++    if (!m_screenConfiguration) {
++        return 0;
++    }
++    return m_screenConfiguration->outputs().count();
+ }
+ 
+ QRect ShellCorona::screenGeometry(int id) const
+

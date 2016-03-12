@@ -6,6 +6,11 @@ plasma-workspace (4:5.5.5.2-0ubuntu1) UNRELEASED; urgency=medium
   [ Clive Johnston ]
   * Another new upstream bugfix release
 
+  [ Michael Marley ]
+  * Cherrypicked fix ( plasma_applet_actions_crash.diff ) for
+    https://bugs.kde.org/show_bug.cgi?id=351777 which is a fix
+    upstream for Plasma 5.6.
+
  -- Philip Muškovac <yofel@kubuntu.org>  Tue, 08 Mar 2016 22:34:34 +0100
 
 plasma-workspace (4:5.5.4-0ubuntu1) xenial; urgency=medium
