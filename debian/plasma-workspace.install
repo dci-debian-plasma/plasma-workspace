@@ -93,6 +93,7 @@ usr/share/knotifications5/freespacenotifier.notifyrc
 usr/share/knotifications5/phonon.notifyrc
 usr/share/kservices5/applications.protocol
 usr/share/kservices5/desktop.protocol
+usr/share/kservices5/ion-bbcukmet.desktop
 usr/share/kservices5/ion-envcan.desktop
 usr/share/kservices5/ion-noaa.desktop
 usr/share/kservices5/ion-wettercom.desktop
