@@ -8,7 +8,6 @@
 <headers>
     /usr/include/kworkspace5/
     /usr/include/plasma/geolocation/
-    /usr/include/legacytaskmanager/
     /usr/include/plasma/weather/
     /usr/include/taskmanager/
 </headers>
