@@ -1,21 +1,13 @@
-commit 603d1189c3bbeccccbcc95f4ef44858f04674771
-Author: Jonathan Riddell <jr@jriddell.org>
-Date:   Wed Jun 8 17:36:03 2016 +0100
-
-    Bump minimum requirement to Qt 5.6.1
-    
-    CCMAIL: plasma-devel@kde.org
-
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index f6391bf..8b78240 100644
+index 8b78240..f6391bf 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -4,7 +4,7 @@ set(PROJECT_VERSION_MAJOR 5)
  
  cmake_minimum_required(VERSION 2.8.12 FATAL_ERROR)
  
--set(QT_MIN_VERSION "5.6.0")
-+set(QT_MIN_VERSION "5.6.1")
+-set(QT_MIN_VERSION "5.6.1")
++set(QT_MIN_VERSION "5.6.0")
  set(KF5_MIN_VERSION "5.18.0")
  set(INSTALL_SDDM_THEME TRUE)
  find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Widgets Quick QuickWidgets Concurrent Test Script Network)
