@@ -28,6 +28,7 @@ usr/lib/*/libkdeinit5_kcminit_startup.so
 usr/lib/*/libkdeinit5_klipper.so
 usr/lib/*/libkdeinit5_ksmserver.so
 usr/lib/*/libkdeinit5_kuiserver5.so
+usr/lib/*/qt5/plugins/applets/plasma_applet_notifications.so
 usr/lib/*/qt5/plugins/kcm_krunner_kill.so
 usr/lib/*/qt5/plugins/kf5/kded/appmenu.so
 usr/lib/*/qt5/plugins/kf5/kded/desktopnotifier.so
@@ -64,7 +65,6 @@ usr/lib/*/qt5/plugins/plasma/applets/org.kde.plasma.private.systemtray.so
 usr/lib/*/qt5/plugins/plasma/applets/org.kde.plasma.systemtray.so
 usr/lib/*/qt5/plugins/plasma/dataengine/
 usr/lib/*/qt5/plugins/plasma/packagestructure/
-usr/lib/*/qt5/plugins/plasma_applet_notifications.so
 usr/lib/*/qt5/plugins/plasma_containmentactions_applauncher.so
 usr/lib/*/qt5/plugins/plasma_containmentactions_contextmenu.so
 usr/lib/*/qt5/plugins/plasma_containmentactions_paste.so
