@@ -17,8 +17,8 @@ Index: plasma-workspace/startkde/CMakeLists.txt
  configure_file(startplasma.cmake ${CMAKE_CURRENT_BINARY_DIR}/startplasma  @ONLY)
 Index: plasma-workspace/startkde/startkde.cmake
 ===================================================================
---- plasma-workspace.orig/startkde/startkde.cmake	2015-09-04 09:36:58.624473064 +0200
-+++ plasma-workspace/startkde/startkde.cmake	2015-09-04 09:36:58.620473223 +0200
+--- plasma-workspace.orig/startkde/startkde.cmake
++++ plasma-workspace/startkde/startkde.cmake
 @@ -3,6 +3,8 @@
  #  DEFAULT KDE STARTUP SCRIPT ( @PROJECT_VERSION@ )
  #
@@ -28,7 +28,7 @@ Index: plasma-workspace/startkde/startkde.cmake
  if test "x$1" = x--failsafe; then
      KDE_FAILSAFE=1 # General failsafe flag
      KWIN_COMPOSE=N # Disable KWin's compositing
-@@ -19,7 +21,7 @@ unset DYLD_FORCE_FLAT_NAMESPACE
+@@ -20,7 +22,7 @@ unset DYLD_FORCE_FLAT_NAMESPACE
  # in case we have been started with full pathname spec without being in PATH
  bindir=`echo "$0" | sed -n 's,^\(/.*\)/[^/][^/]*$,\1,p'`
  if [ -n "$bindir" ]; then
@@ -37,7 +37,7 @@ Index: plasma-workspace/startkde/startkde.cmake
    qdbus=$qbindir/qdbus
    case $PATH in
      $bindir|$bindir:*|*:$bindir|*:$bindir:*) ;;
-@@ -201,7 +203,7 @@
+@@ -206,7 +208,7 @@ fi
  # better use the Autostart folder.
  
  # TODO: Use GenericConfigLocation once we depend on Qt 5.4

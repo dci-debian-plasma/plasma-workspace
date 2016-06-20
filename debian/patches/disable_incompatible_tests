@@ -1,7 +1,7 @@
 Index: plasma-workspace/kioslave/desktop/tests/CMakeLists.txt
 ===================================================================
---- plasma-workspace.orig/kioslave/desktop/tests/CMakeLists.txt	2015-09-04 09:33:27.368853292 +0200
-+++ plasma-workspace/kioslave/desktop/tests/CMakeLists.txt	2015-09-04 13:02:55.912620678 +0200
+--- plasma-workspace.orig/kioslave/desktop/tests/CMakeLists.txt
++++ plasma-workspace/kioslave/desktop/tests/CMakeLists.txt
 @@ -1,6 +1,6 @@
  add_executable(testdesktop kio_desktop_test.cpp)
  target_link_libraries(testdesktop KF5::KIOWidgets KF5::Solid Qt5::Test KF5::KDELibs4Support)
