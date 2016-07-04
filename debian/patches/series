@@ -2,3 +2,4 @@ kubuntu_startkde-qtpath.diff
 disable_incompatible_tests
 neon_qt_5.6.0.diff
 neon_prison-api-backport.diff
+neon_ignore_test.diff
