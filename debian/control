@@ -203,8 +203,8 @@ Description: Plasma Workspace for KF5 library
 Package: libtaskmanager6
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
-Breaks: libtaskmanager5 (<< ${binary:Version}~ciBuild)
-Replaces: libtaskmanager5 (<< ${binary:Version}~ciBuild)
+Breaks: libtaskmanager5 (<< 4:5.7.0)
+Replaces: libtaskmanager5 (<< 4:5.7.0)
 Description: Plasma Workspace for KF5 library
  Plasma Workspace for KF5. Workspaces provide
  support for KDE Plasma Widgets, integrated search,
