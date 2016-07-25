@@ -1,3 +1,2 @@
 kubuntu_startkde-qtpath.diff
 disable_incompatible_tests
-maintainer_fix-black-screen.diff
