@@ -2,10 +2,10 @@ Description: set path to qtpath
 Forwarded: not-needed
 Origin: vendor
 Author: Jonathan Riddell <jriddell@ubuntu.com>
-Index: plasma-workspace/startkde/CMakeLists.txt
+Index: plasma-workspace-5.7.2/startkde/CMakeLists.txt
 ===================================================================
---- plasma-workspace.orig/startkde/CMakeLists.txt
-+++ plasma-workspace/startkde/CMakeLists.txt
+--- plasma-workspace-5.7.2.orig/startkde/CMakeLists.txt
++++ plasma-workspace-5.7.2/startkde/CMakeLists.txt
 @@ -7,6 +7,8 @@ if(NOT CMAKE_INSTALL_PREFIX STREQUAL "/u
      set(EXPORT_XCURSOR_PATH "XCURSOR_PATH=${CMAKE_INSTALL_PREFIX}/share/icons:$XCURSOR_PATH\":~/.icons:/usr/share/icons:/usr/share/pixmaps:/usr/X11R6/lib/X11/icons\"; export XCURSOR_PATH")
  endif()
@@ -15,10 +15,15 @@ Index: plasma-workspace/startkde/CMakeLists.txt
  configure_file(startkde.cmake ${CMAKE_CURRENT_BINARY_DIR}/startkde  @ONLY)
  configure_file(startplasmacompositor.cmake ${CMAKE_CURRENT_BINARY_DIR}/startplasmacompositor  @ONLY)
  configure_file(startplasma.cmake ${CMAKE_CURRENT_BINARY_DIR}/startplasma  @ONLY)
-Index: plasma-workspace/startkde/startkde.cmake
+Index: plasma-workspace-5.7.2/startkde/startkde.cmake
 ===================================================================
+<<<<<<< HEAD
 --- plasma-workspace.orig/startkde/startkde.cmake
 +++ plasma-workspace/startkde/startkde.cmake
+=======
+--- plasma-workspace-5.7.2.orig/startkde/startkde.cmake
++++ plasma-workspace-5.7.2/startkde/startkde.cmake
+>>>>>>> Neon/stable
 @@ -3,6 +3,8 @@
  #  DEFAULT KDE STARTUP SCRIPT ( @PROJECT_VERSION@ )
  #
