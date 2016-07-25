@@ -1,4 +1,3 @@
 kubuntu_startkde-qtpath.diff
 disable_incompatible_tests
 neon_prison-api-backport.diff
-unfix_plasma_scripting.diff
