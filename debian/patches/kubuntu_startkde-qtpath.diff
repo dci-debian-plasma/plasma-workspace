@@ -17,13 +17,8 @@ Index: plasma-workspace-5.7.2/startkde/CMakeLists.txt
  configure_file(startplasma.cmake ${CMAKE_CURRENT_BINARY_DIR}/startplasma  @ONLY)
 Index: plasma-workspace-5.7.2/startkde/startkde.cmake
 ===================================================================
-<<<<<<< HEAD
---- plasma-workspace.orig/startkde/startkde.cmake
-+++ plasma-workspace/startkde/startkde.cmake
-=======
 --- plasma-workspace-5.7.2.orig/startkde/startkde.cmake
 +++ plasma-workspace-5.7.2/startkde/startkde.cmake
->>>>>>> Neon/stable
 @@ -3,6 +3,8 @@
  #  DEFAULT KDE STARTUP SCRIPT ( @PROJECT_VERSION@ )
  #
