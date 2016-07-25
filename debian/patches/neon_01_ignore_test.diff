@@ -1,8 +1,8 @@
-Index: plasma-workspace/shell/tests/CMakeLists.txt
+Index: plasma-workspace-5.7.2/shell/tests/CMakeLists.txt
 ===================================================================
---- plasma-workspace.orig/shell/tests/CMakeLists.txt
-+++ plasma-workspace/shell/tests/CMakeLists.txt
-@@ -17,5 +17,3 @@ function(plasmoidtest plasmoidName)
+--- plasma-workspace-5.7.2.orig/shell/tests/CMakeLists.txt
++++ plasma-workspace-5.7.2/shell/tests/CMakeLists.txt
+@@ -13,5 +13,3 @@ function(plasmoidtest plasmoidName)
      )
  endfunction()
  
