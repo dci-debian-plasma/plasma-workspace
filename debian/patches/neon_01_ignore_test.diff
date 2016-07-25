@@ -1,0 +1,10 @@
+Index: plasma-workspace-5.7.2/shell/tests/CMakeLists.txt
+===================================================================
+--- plasma-workspace-5.7.2.orig/shell/tests/CMakeLists.txt
++++ plasma-workspace-5.7.2/shell/tests/CMakeLists.txt
+@@ -13,5 +13,3 @@ function(plasmoidtest plasmoidName)
+     )
+ endfunction()
+ 
+-plasmoidtest(org.kde.plasma.analogclock)
+-plasmoidtest(org.kde.plasma.kickoff)
