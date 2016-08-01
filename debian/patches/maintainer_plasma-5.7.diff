@@ -341,29 +341,6 @@ index 4a2f7f9..55b14c4 100644
      QList<Plasma::Containment *> m_waitingPanels;
      QHash<QString, QString> m_activityContainmentPlugins;
      QHash<QString, QHash<int, Plasma::Containment *> > m_desktopContainments;
-diff --git a/shell/tests/CMakeLists.txt b/shell/tests/CMakeLists.txt
-deleted file mode 100644
-index 4c948a6..0000000
---- a/shell/tests/CMakeLists.txt
-+++ /dev/null
-@@ -1,17 +0,0 @@
--function(plasmoidtest plasmoidName)
--    if (Qt5Core_VERSION_STRING VERSION_LESS "5.6.1")
--        return()
--    endif ()
--    configure_file(
--            ${CMAKE_CURRENT_SOURCE_DIR}/testLayout.js.in
--            ${CMAKE_CURRENT_BINARY_DIR}/testLayout-${plasmoidName}.js
--            @ONLY
--    )
--
--    add_test(NAME ${plasmoidName}-test COMMAND
--            plasmashell --test ${CMAKE_CURRENT_BINARY_DIR}/testLayout-plasmoidName.js
--    )
--endfunction()
--
--plasmoidtest(org.kde.plasma.analogclock)
--plasmoidtest(org.kde.plasma.kickoff)
 diff --git a/shell/tests/testLayout.js.in b/shell/tests/testLayout.js.in
 deleted file mode 100644
 index e6002d4..0000000
