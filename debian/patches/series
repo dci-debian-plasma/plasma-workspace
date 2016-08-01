@@ -1,6 +1,5 @@
 kubuntu_startkde-qtpath.diff
 disable_incompatible_tests
 neon_01_ignore_test.diff
-maintainer_fix-black-screen.diff
-fix_plasma_scripting.diff
 maintainer_prison-version.diff
+maintainer_plasma-5.7.diff
