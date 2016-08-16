@@ -21,6 +21,7 @@ usr/bin/startkde
 usr/bin/systemmonitor
 usr/bin/xembedsniproxy
 usr/lib/*/libexec/drkonqi
+usr/lib/*/libexec/ksmserver-logout-greeter
 usr/lib/*/libexec/ksyncdbusenv
 usr/lib/*/libkdeinit5_kcminit.so
 usr/lib/*/libkdeinit5_kcminit_startup.so
