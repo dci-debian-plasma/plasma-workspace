@@ -78,7 +78,6 @@ usr/lib/*/qt5/plugins/plasmacalendarplugins/holidays/
 usr/lib/*/qt5/plugins/plasmacalendarplugins/holidaysevents.so
 usr/lib/*/qt5/qml/org/kde/holidayeventshelperplugin/
 usr/lib/*/qt5/qml/org/kde/plasma/private/digitalclock/
-usr/lib/*/qt5/qml/org/kde/plasma/private/icon/
 usr/lib/*/qt5/qml/org/kde/plasma/private/notifications/
 usr/lib/*/qt5/qml/org/kde/plasma/private/sessions/libsessionsprivateplugin.so
 usr/lib/*/qt5/qml/org/kde/plasma/private/sessions/qmldir
