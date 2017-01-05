@@ -260,9 +260,7 @@ usr/share/locale/*/*/systemmonitor.mo
 usr/share/locale/*/LC_MESSAGES/plasma_engine_devicenotifications.mo
 usr/share/metainfo/org.kde.plasma.activitybar.appdata.xml
 usr/share/metainfo/org.kde.plasma.analogclock.appdata.xml
-usr/share/metainfo/org.kde.plasma.battery.appdata.xml
 usr/share/metainfo/org.kde.plasma.calendar.appdata.xml
-usr/share/metainfo/org.kde.plasma.clipboard.appdata.xml
 usr/share/metainfo/org.kde.plasma.devicenotifier.appdata.xml
 usr/share/metainfo/org.kde.plasma.digitalclock.appdata.xml
 usr/share/metainfo/org.kde.plasma.icon.appdata.xml
