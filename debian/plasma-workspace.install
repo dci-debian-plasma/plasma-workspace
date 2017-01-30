@@ -214,11 +214,13 @@ usr/share/locale/*/*/phonon_kde.mo
 usr/share/locale/*/*/plasma_applet_org.kde.color.mo
 usr/share/locale/*/*/plasma_applet_org.kde.image.mo
 usr/share/locale/*/*/plasma_applet_org.kde.plasma.analogclock.mo
+usr/share/locale/*/*/plasma_applet_org.kde.plasma.appmenu.mo
 usr/share/locale/*/*/plasma_applet_org.kde.plasma.battery.mo
 usr/share/locale/*/*/plasma_applet_org.kde.plasma.calendar.mo
 usr/share/locale/*/*/plasma_applet_org.kde.plasma.clipboard.mo
 usr/share/locale/*/*/plasma_applet_org.kde.plasma.devicenotifier.mo
 usr/share/locale/*/*/plasma_applet_org.kde.plasma.digitalclock.mo
+usr/share/locale/*/*/plasma_applet_org.kde.plasma.icon.mo
 usr/share/locale/*/*/plasma_applet_org.kde.plasma.lock_logout.mo
 usr/share/locale/*/*/plasma_applet_org.kde.plasma.mediacontroller.mo
 usr/share/locale/*/*/plasma_applet_org.kde.plasma.notifications.mo
