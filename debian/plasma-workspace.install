@@ -37,13 +37,11 @@ usr/lib/*/qt5/plugins/kf5/kded/desktopnotifier.so
 usr/lib/*/qt5/plugins/kf5/kded/freespacenotifier.so
 usr/lib/*/qt5/plugins/kf5/kded/ksysguard.so
 usr/lib/*/qt5/plugins/kf5/kded/ktimezoned.so
-usr/lib/*/qt5/plugins/kf5/kded/remotedirnotify.so
 usr/lib/*/qt5/plugins/kf5/kded/solidautoeject.so
 usr/lib/*/qt5/plugins/kf5/kded/soliduiserver.so
 usr/lib/*/qt5/plugins/kf5/kded/statusnotifierwatcher.so
 usr/lib/*/qt5/plugins/kf5/kio/desktop.so
 usr/lib/*/qt5/plugins/kio_applications.so
-usr/lib/*/qt5/plugins/kio_remote.so
 usr/lib/*/qt5/plugins/kpackage/
 usr/lib/*/qt5/plugins/krunner_activities.so
 usr/lib/*/qt5/plugins/krunner_baloosearchrunner.so
@@ -193,7 +191,6 @@ usr/share/kservices5/plasma-wallpaper-org.kde.image.desktop
 usr/share/kservices5/plasma-wallpaper-org.kde.slideshow.desktop
 usr/share/kservices5/programs.protocol
 usr/share/kservices5/recentdocuments.desktop
-usr/share/kservices5/remote.protocol
 usr/share/kservicetypes5/phononbackend.desktop
 usr/share/kservicetypes5/plasma-geolocationprovider.desktop
 usr/share/kservicetypes5/plasma-layouttemplate.desktop
