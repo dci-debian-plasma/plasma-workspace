@@ -1,10 +1,10 @@
-Index: plasma-workspace/kioslave/desktop/tests/CMakeLists.txt
+Index: b/kioslave/desktop/tests/CMakeLists.txt
 ===================================================================
---- plasma-workspace.orig/kioslave/desktop/tests/CMakeLists.txt
-+++ plasma-workspace/kioslave/desktop/tests/CMakeLists.txt
+--- a/kioslave/desktop/tests/CMakeLists.txt
++++ b/kioslave/desktop/tests/CMakeLists.txt
 @@ -1,6 +1,6 @@
  add_executable(testdesktop kio_desktop_test.cpp)
- target_link_libraries(testdesktop KF5::KIOWidgets KF5::Solid Qt5::Test)
+ target_link_libraries(testdesktop KF5::KIOWidgets KF5::Solid Qt5::Test Qt5::DBus)
  
 -ecm_mark_as_test(testdesktop)
 -add_test(testdesktop testdesktop)
