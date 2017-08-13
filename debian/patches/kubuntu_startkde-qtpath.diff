@@ -20,7 +20,7 @@ Index: b/startkde/startkde.cmake
 --- a/startkde/startkde.cmake
 +++ b/startkde/startkde.cmake
 @@ -3,6 +3,8 @@
- #  DEFAULT KDE STARTUP SCRIPT ( @PROJECT_VERSION@ )
+ #  DEFAULT Plasma STARTUP SCRIPT ( @PROJECT_VERSION@ )
  #
  
 +QTPATHS=/usr/lib/@DEB_HOST_MULTIARCH@/qt5/bin/qtpaths
