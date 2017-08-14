@@ -99,6 +99,7 @@ usr/share/dbus-1/services/org.kde.plasma.Notifications.service
 usr/share/desktop-directories/
 usr/share/doc/HTML/*/kcontrol/
 usr/share/doc/HTML/*/klipper/
+usr/share/doc/HTML/*/PolicyKit-kde/
 usr/share/kconf_update/krunnerplugins.upd
 usr/share/kio_desktop/DesktopLinks/Home.desktop
 usr/share/kio_desktop/directory.desktop
