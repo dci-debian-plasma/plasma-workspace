@@ -45,7 +45,6 @@ usr/lib/*/qt5/plugins/kf5/kio/desktop.so
 usr/lib/*/qt5/plugins/kio_applications.so
 usr/lib/*/qt5/plugins/kpackage/
 usr/lib/*/qt5/plugins/krunner_activities.so
-usr/lib/*/qt5/plugins/krunner_baloosearchrunner.so
 usr/lib/*/qt5/plugins/krunner_bookmarksrunner.so
 usr/lib/*/qt5/plugins/krunner_calculatorrunner.so
 usr/lib/*/qt5/plugins/krunner_kill.so
