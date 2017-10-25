@@ -91,6 +91,7 @@ usr/lib/*/qt5/qml/org/kde/plasma/workspace/
 usr/lib/*/qt5/qml/org/kde/taskmanager/
 usr/share/applications/org.kde.klipper.desktop
 usr/share/applications/org.kde.plasmashell.desktop
+usr/share/applications/org.kde.systemmonitor.desktop
 usr/share/applications/plasma-windowed.desktop
 usr/share/config.kcfg/freespacenotifier.kcfg
 usr/share/dbus-1/services/kf5_org.kde.kuiserver.service
