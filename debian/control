@@ -250,7 +250,7 @@ Description: Breeze SDDM theme
 
 Package: plasma-workspace-dbg
 Section: debug
-Priority: extra
+Priority: optional
 Architecture: any
 Depends: plasma-workspace (= ${binary:Version}) | libweather-ion7 (= ${binary:Version}) | libplasma-geolocation-interface5 (= ${binary:Version}) | libkworkspace5-5 (= ${binary:Version}),
          ${misc:Depends},
@@ -261,3 +261,4 @@ Description: Plasma Workspace for KF5
  hardware management and a high degree of customizability.
  .
  This package contains the debugging symbols.
+
