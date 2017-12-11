@@ -123,6 +123,7 @@ Description: Plasma Workspace for KF5 - Wayland integration
 Package: plasma-workspace
 Architecture: any
 Depends: dbus-x11,
+         drkonqi,
          frameworkintegration,
          gdb-minimal | gdb,
          iso-codes,
