@@ -35,6 +35,7 @@ usr/lib/*/libkdeinit5_kuiserver5.so
 usr/lib/*/qt5/plugins/appstreamrunner.so
 usr/lib/*/qt5/plugins/kcm_krunner_kill.so
 usr/lib/*/qt5/plugins/kf5/kded/appmenu.so
+usr/lib/*/qt5/plugins/kf5/kded/colorcorrectlocationupdater.so
 usr/lib/*/qt5/plugins/kf5/kded/desktopnotifier.so
 usr/lib/*/qt5/plugins/kf5/kded/freespacenotifier.so
 usr/lib/*/qt5/plugins/kf5/kded/ksysguard.so
@@ -78,6 +79,7 @@ usr/lib/*/qt5/plugins/plasma_containmentactions_switchdesktop.so
 usr/lib/*/qt5/plugins/plasma_containmentactions_switchwindow.so
 usr/lib/*/qt5/plugins/plasmacalendarplugins/holidays/
 usr/lib/*/qt5/plugins/plasmacalendarplugins/holidaysevents.so
+usr/lib/*/qt5/qml/org/kde/colorcorrect/
 usr/lib/*/qt5/qml/org/kde/holidayeventshelperplugin/
 usr/lib/*/qt5/qml/org/kde/plasma/private/appmenu/libappmenuplugin.so
 usr/lib/*/qt5/qml/org/kde/plasma/private/appmenu/qmldir
