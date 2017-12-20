@@ -1,0 +1,45 @@
+From d90c63ac8fe54567dcf5f634f2112c6ab2aa1027 Mon Sep 17 00:00:00 2001
+From: Aleix Pol <aleixpol@kde.org>
+Date: Sun, 3 Dec 2017 15:39:03 +0100
+Subject: Remove blocking qtpaths call at boot
+
+Summary: We are just looking for files in .config and we already know where that is
+
+Test Plan: Added a script and it defined things.
+
+Reviewers: #plasma, hein
+
+Reviewed By: #plasma, hein
+
+Subscribers: plasma-devel
+
+Tags: #plasma
+
+Differential Revision: https://phabricator.kde.org/D9134
+---
+ startkde/startkde.cmake | 6 ++----
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+
+diff --git a/startkde/startkde.cmake b/startkde/startkde.cmake
+index e9fa0be..8367ea6 100644
+--- a/startkde/startkde.cmake
++++ b/startkde/startkde.cmake
+@@ -149,13 +149,11 @@ fi
+ # For anything else (that doesn't set env vars, or that needs a window manager),
+ # better use the Autostart folder.
+ 
+-scriptpath=`qtpaths --locate-dirs GenericConfigLocation plasma-workspace | tr ':' '\n'`
++scriptpath=$configDir
+ 
+ # Add /env/ to the directory to locate the scripts to be sourced
+-for prefix in `echo $scriptpath`; do
+-  for file in "$prefix"/env/*.sh; do
++for file in "$scriptpath"/plasma-workspace/env/*.sh; do
+     test -r "$file" && . "$file" || true
+-  done
+ done
+ 
+ # Activate the kde font directories.
+-- 
+cgit v0.11.2
+
