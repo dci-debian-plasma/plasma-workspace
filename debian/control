@@ -87,35 +87,51 @@ Homepage: https://projects.kde.org/projects/kde/workspace/plasma-workspace
 Vcs-Browser: http://anonscm.debian.org/cgit/pkg-kde/plasma/plasma-workspace.git
 Vcs-Git: git://anonscm.debian.org/pkg-kde/plasma/plasma-workspace.git
 
-Package: plasma-workspace-dev
+Package: libkworkspace5-5
 Architecture: any
-Depends: libkf5sysguard-dev,
-         libkf5windowsystem-dev (>= 5.4.0),
-         plasma-framework-dev (>= 5.13.0~),
-         plasma-workspace (= ${binary:Version}),
-         qtbase5-dev (>= 5.4.0~),
-         ${allLibraries},
-         ${misc:Depends}
-Conflicts: kde-workspace-dev
-Description: Plasma Workspace for KF5 devel files
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Plasma Workspace for KF5 library
  Plasma Workspace for KF5. Workspaces provide
  support for KDE Plasma Widgets, integrated search,
  hardware management and a high degree of customizability.
+ Kworkspace library.
  .
- This package contains the development files.
+ This package contains library files.
 
-Package: plasma-workspace-wayland
+Package: libplasma-geolocation-interface5
 Architecture: any
-Depends: kwayland-integration,
-         kwin-wayland,
-         plasma-workspace (= ${binary:Version}),
-         qtwayland5,
-         ${misc:Depends},
-         ${shlibs:Depends}
-Description: Plasma Workspace for KF5 - Wayland integration
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Plasma Workspace for KF5 library
  Plasma Workspace for KF5. Workspaces provide
  support for KDE Plasma Widgets, integrated search,
  hardware management and a high degree of customizability.
+ Interface library for geolocation.
+ .
+ This package contains library files.
+
+Package: libtaskmanager6
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Breaks: libtaskmanager5 (<< 4:5.7.0)
+Replaces: libtaskmanager5 (<< 4:5.7.0)
+Description: Plasma Workspace for KF5 library
+ Plasma Workspace for KF5. Workspaces provide
+ support for KDE Plasma Widgets, integrated search,
+ hardware management and a high degree of customizability.
+ Taskmanager library.
+ .
+ This package contains library files.
+
+Package: libweather-ion7
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Plasma Workspace for KF5 library
+ Plasma Workspace for KF5. Workspaces provide
+ support for KDE Plasma Widgets, integrated search,
+ hardware management and a high degree of customizability.
+ Weather_ion library.
+ .
+ This package contains library files.
 
 Package: plasma-workspace
 Architecture: any
@@ -182,51 +198,35 @@ Description: Plasma Workspace for KF5
  .
  THIS WILL REMOVE YOUR KDE Plasma 4.
 
-Package: libkworkspace5-5
+Package: plasma-workspace-dev
 Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}
-Description: Plasma Workspace for KF5 library
+Depends: libkf5sysguard-dev,
+         libkf5windowsystem-dev (>= 5.4.0),
+         plasma-framework-dev (>= 5.13.0~),
+         plasma-workspace (= ${binary:Version}),
+         qtbase5-dev (>= 5.4.0~),
+         ${allLibraries},
+         ${misc:Depends}
+Conflicts: kde-workspace-dev
+Description: Plasma Workspace for KF5 devel files
  Plasma Workspace for KF5. Workspaces provide
  support for KDE Plasma Widgets, integrated search,
  hardware management and a high degree of customizability.
- Kworkspace library.
  .
- This package contains library files.
+ This package contains the development files.
 
-Package: libplasma-geolocation-interface5
+Package: plasma-workspace-wayland
 Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}
-Description: Plasma Workspace for KF5 library
+Depends: kwayland-integration,
+         kwin-wayland,
+         plasma-workspace (= ${binary:Version}),
+         qtwayland5,
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: Plasma Workspace for KF5 - Wayland integration
  Plasma Workspace for KF5. Workspaces provide
  support for KDE Plasma Widgets, integrated search,
  hardware management and a high degree of customizability.
- Interface library for geolocation.
- .
- This package contains library files.
-
-Package: libtaskmanager6
-Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}
-Breaks: libtaskmanager5 (<< 4:5.7.0)
-Replaces: libtaskmanager5 (<< 4:5.7.0)
-Description: Plasma Workspace for KF5 library
- Plasma Workspace for KF5. Workspaces provide
- support for KDE Plasma Widgets, integrated search,
- hardware management and a high degree of customizability.
- Taskmanager library.
- .
- This package contains library files.
-
-Package: libweather-ion7
-Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}
-Description: Plasma Workspace for KF5 library
- Plasma Workspace for KF5. Workspaces provide
- support for KDE Plasma Widgets, integrated search,
- hardware management and a high degree of customizability.
- Weather_ion library.
- .
- This package contains library files.
 
 Package: sddm-theme-breeze
 Architecture: any
