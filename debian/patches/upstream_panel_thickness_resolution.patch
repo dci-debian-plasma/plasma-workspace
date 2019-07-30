@@ -1,0 +1,26 @@
+From fead2de6e2b2d3cd4b9f3ab6edfae42bb5e7dea9 Mon Sep 17 00:00:00 2001
+From: Marco Martin <notmart@gmail.com>
+Date: Tue, 30 Jul 2019 16:03:07 +0200
+Subject: take current thickness if perresolution not provided
+
+---
+ shell/panelview.cpp | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+diff --git a/shell/panelview.cpp b/shell/panelview.cpp
+index f0e9867..447b567 100644
+--- a/shell/panelview.cpp
++++ b/shell/panelview.cpp
+@@ -544,8 +544,7 @@ void PanelView::restore()
+         m_offset = qMax(0, m_offset);
+     }
+ 
+-    const int defaultThickness = 30;
+-    setThickness(config().readEntry<int>("thickness", defaultThickness));
++    setThickness(config().readEntry<int>("thickness", m_thickness));
+ 
+     const QSize screenSize = m_screenToFollow->size();
+     setMinimumSize(QSize(-1, -1));
+-- 
+cgit v1.1
+
