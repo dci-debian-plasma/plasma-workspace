@@ -1,3 +1,9 @@
+plasma-workspace (4:5.14.5.1-3) stable; urgency=medium
+
+  * Add second patch to fix panel thickness per resolution.
+
+ -- Scarlett Moore <sgmoore@kde.org>  Fri, 02 Aug 2019 07:24:30 -0700
+
 plasma-workspace (4:5.14.5.1-2) stable; urgency=medium
 
   * Add upstream patch to fix panel thickness per resolution.

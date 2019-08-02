@@ -1,0 +1,388 @@
+diff --git a/shell/panelview.h b/shell/panelview.h
+--- a/shell/panelview.h
++++ b/shell/panelview.h
+@@ -114,6 +114,7 @@
+     ~PanelView() override;
+ 
+     KConfigGroup config() const override;
++    KConfigGroup configDefaults() const;
+ 
+     Q_INVOKABLE void maximize();
+ 
+@@ -151,8 +152,9 @@
+      */
+     QRect geometryByDistance(int distance) const;
+ 
+-    /* Shared with script/panel.cpp */
++    /* Both Shared with script/panel.cpp */
+     static KConfigGroup panelConfig(ShellCorona *corona, Plasma::Containment *containment, QScreen *screen);
++    static KConfigGroup panelConfigDefaults(ShellCorona *corona, Plasma::Containment *containment, QScreen *screen);
+ 
+     void updateStruts();
+ 
+@@ -204,6 +206,7 @@
+     void updateMask();
+ 
+ private:
++    int readConfigValueWithFallBack(const QString &key, int defaultValue);
+     void resizePanel();
+     void integrateScreen();
+     bool containmentContainsPosition(const QPointF &point) const;
+diff --git a/shell/panelview.cpp b/shell/panelview.cpp
+--- a/shell/panelview.cpp
++++ b/shell/panelview.cpp
+@@ -136,11 +136,34 @@
+     }
+ }
+ 
++KConfigGroup PanelView::panelConfigDefaults(ShellCorona *corona, Plasma::Containment *containment, QScreen *screen)
++{
++    if (!containment || !screen) {
++        return KConfigGroup();
++    }
++
++    KConfigGroup views(corona->applicationConfig(), "PlasmaViews");
++    views = KConfigGroup(&views, QStringLiteral("Panel %1").arg(containment->id()));
++
++    return KConfigGroup(&views, QStringLiteral("Defaults"));
++}
++
++int PanelView::readConfigValueWithFallBack(const QString &key, int defaultValue)
++{
++    int value = config().readEntry(key, configDefaults().readEntry(key, defaultValue));
++    return value;
++}
++
+ KConfigGroup PanelView::config() const
+ {
+     return panelConfig(m_corona, containment(), m_screenToFollow);
+ }
+ 
++KConfigGroup PanelView::configDefaults() const
++{
++    return panelConfigDefaults(m_corona, containment(), m_screenToFollow);
++}
++
+ void PanelView::maximize()
+ {
+     int length;
+@@ -166,7 +189,7 @@
+     }
+ 
+     m_alignment = alignment;
+-    //alignment is not resolution dependent
++    //alignment is not resolution dependent, doesn't save to Defaults
+     config().parent().writeEntry("alignment", (int)m_alignment);
+     emit alignmentChanged();
+     positionPanel();
+@@ -195,6 +218,7 @@
+ 
+     m_offset = offset;
+     config().writeEntry("offset", m_offset);
++    configDefaults().writeEntry("offset", m_offset);
+     positionPanel();
+     emit offsetChanged();
+     m_corona->requestApplicationConfigSync();
+@@ -216,6 +240,7 @@
+     emit thicknessChanged();
+ 
+     config().writeEntry("thickness", value);
++    configDefaults().writeEntry("thickness", value);
+     m_corona->requestApplicationConfigSync();
+     resizePanel();
+ }
+@@ -252,6 +277,7 @@
+     }
+ 
+     config().writeEntry("maxLength", length);
++    configDefaults().writeEntry("maxLength", length);
+     m_maxLength = length;
+     emit maximumLengthChanged();
+     m_corona->requestApplicationConfigSync();
+@@ -275,6 +301,7 @@
+     }
+ 
+     config().writeEntry("minLength", length);
++    configDefaults().writeEntry("minLength", length);
+     m_minLength = length;
+     emit minimumLengthChanged();
+     m_corona->requestApplicationConfigSync();
+@@ -333,7 +360,7 @@
+     }
+ 
+     if (config().isValid() && config().parent().isValid()) {
+-        //panelVisibility is not resolution dependent
++        //panelVisibility is not resolution dependent, don't write to Defaults
+         config().parent().writeEntry("panelVisibility", (int)mode);
+         m_corona->requestApplicationConfigSync();
+     }
+@@ -532,33 +559,40 @@
+         return;
+     }
+ 
+-    //defaults, may be altered by values written by the scripting in startup phase
+-    const int defaultOffset = 0;
+-    const int defaultAlignment = Qt::AlignLeft;
++    // All the defaults are based on whatever are the current values
++    // so won't be weirdly resetted after screen resolution change
++
+     //alignment is not resolution dependent
+     //but if fails read it from the resolution dependent one as
+     //the place for this config key is changed in Plasma 5.9
+-    setAlignment((Qt::Alignment)config().parent().readEntry<int>("alignment", config().readEntry<int>("alignment", defaultAlignment)));
+-    m_offset = config().readEntry<int>("offset", defaultOffset);
++    //Do NOT use readConfigValueWithFallBack
++    setAlignment((Qt::Alignment)config().parent().readEntry<int>("alignment", config().readEntry<int>("alignment", m_alignment)));
++
++    // All the other values are read from screen independent values,
++    // but fallback on the screen independent section, as is the only place
++    // is safe to directly write during plasma startup, as there can be 
++    // resolutoin changes
++    m_offset = readConfigValueWithFallBack("offset", m_offset);
+     if (m_alignment != Qt::AlignCenter) {
+         m_offset = qMax(0, m_offset);
+     }
+ 
+-    setThickness(config().readEntry<int>("thickness", m_thickness));
++    setThickness(readConfigValueWithFallBack("thickness", m_thickness));
+ 
+     const QSize screenSize = m_screenToFollow->size();
+     setMinimumSize(QSize(-1, -1));
+     //FIXME: an invalid size doesn't work with QWindows
+     setMaximumSize(screenSize);
+ 
+     const int side = containment()->formFactor() == Plasma::Types::Vertical ? screenSize.height() : screenSize.width();
+     const int maxSize = side - m_offset;
+-    m_maxLength = qBound<int>(MINSIZE, config().readEntry<int>("maxLength", side), maxSize);
+-    m_minLength = qBound<int>(MINSIZE, config().readEntry<int>("minLength", side), maxSize);
++    m_maxLength = qBound<int>(MINSIZE, readConfigValueWithFallBack("maxLength", side), maxSize);
++    m_minLength = qBound<int>(MINSIZE, readConfigValueWithFallBack("minLength", side), maxSize);
+ 
+     //panelVisibility is not resolution dependent
+     //but if fails read it from the resolution dependent one as
+     //the place for this config key is changed in Plasma 5.9
++    //Do NOT use readConfigValueWithFallBack
+     setVisibilityMode((VisibilityMode)config().parent().readEntry<int>("panelVisibility", config().readEntry<int>("panelVisibility", (int)NormalPanel)));
+     m_initCompleted = true;
+     resizePanel();
+diff --git a/shell/scripting/panel.h b/shell/scripting/panel.h
+--- a/shell/scripting/panel.h
++++ b/shell/scripting/panel.h
+@@ -94,6 +94,8 @@
+ private:
+     PanelView *panel() const;
+     KConfigGroup panelConfig() const;
++    KConfigGroup panelConfigDefaults() const;
++
+     ShellCorona *m_corona;
+ };
+ 
+diff --git a/shell/scripting/panel.cpp b/shell/scripting/panel.cpp
+--- a/shell/scripting/panel.cpp
++++ b/shell/scripting/panel.cpp
+@@ -112,7 +112,7 @@
+     return corona()->panelView(c);
+ }
+ 
+-
++// NOTE: this is used *only* for alignment and visibility
+ KConfigGroup Panel::panelConfig() const
+ {
+     int screenNum = qMax(screen(), 0); //if we don't have a screen (-1) we'll be put on screen 0
+@@ -124,9 +124,29 @@
+     return PanelView::panelConfig(corona(), containment(), s);
+ }
+ 
++//NOTE: when we don't have a view we should write only to the defaults group as we don't know yet during startup if we are on the "final" screen resolution yet
++KConfigGroup Panel::panelConfigDefaults() const
++{
++    int screenNum = qMax(screen(), 0); //if we don't have a screen (-1) we'll be put on screen 0
++
++    if (QGuiApplication::screens().size() < screenNum) {
++        return KConfigGroup();
++    }
++    QScreen *s = QGuiApplication::screens().at(screenNum);
++    return PanelView::panelConfigDefaults(corona(), containment(), s);
++}
++
++// NOTE: Alignment is the only one that reads and writes directly from panelconfig()
+ QString Panel::alignment() const
+ {
+-    switch (panelConfig().readEntry("alignment", 0)) {
++    int alignment;
++    if (panel()) {
++        alignment = panel()->alignment();
++    } else {
++        alignment = panelConfig().readEntry("alignment", 0);
++    }
++
++    switch (alignment) {
+         case Qt::AlignRight:
+             return "right";
+         case Qt::AlignCenter:
+@@ -138,6 +158,7 @@
+     return "left";
+ }
+ 
++// NOTE: Alignment is the only one that reads and writes directly from panelconfig()
+ void Panel::setAlignment(const QString &alignment)
+ {
+     int a = Qt::AlignLeft;
+@@ -147,80 +168,117 @@
+         a = Qt::AlignCenter;
+     }
+ 
+-    panelConfig().writeEntry("alignment", a);
++    // Always prefer the view, if available
+     if (panel()) {
+-        QMetaObject::invokeMethod(panel(), "restore");
++        panel()->setAlignment(Qt::Alignment(a));
++    } else {
++        panelConfig().writeEntry("alignment", a);
+     }
+ }
+ 
++
++// From now on only panelConfigDefaults should be used
+ int Panel::offset() const
+ {
+-    return panelConfig().readEntry("offset", 0);
++    if (panel()) {
++        return panel()->offset();
++    } else {
++        return panelConfigDefaults().readEntry("offset", 0);
++    }
+ }
+ 
+ void Panel::setOffset(int pixels)
+ {
+-   panelConfig().writeEntry("offset", pixels);
+-   if (panel()) {
+-       QMetaObject::invokeMethod(panel(), "restore");
+-   }
++    panelConfigDefaults().writeEntry("offset", pixels);
++    if (panel()) {
++        panel()->setOffset(pixels);
++    } else {
++        panelConfigDefaults().readEntry("offset", pixels);
++    }
+ }
+ 
+ int Panel::length() const
+ {
+-    return panelConfig().readEntry("length", 0);
++    if (panel()) {
++        return panel()->length();
++    } else {
++        return panelConfigDefaults().readEntry("length", 0);
++    }
+ }
+ 
+ void Panel::setLength(int pixels)
+ {
+-   panelConfig().writeEntry("length", pixels);
+-   if (panel()) {
+-       QMetaObject::invokeMethod(panel(), "restore");
+-   }
++    if (panel()) {
++        panel()->setLength(pixels);
++    } else {
++        panelConfigDefaults().writeEntry("length", pixels);
++    }
+ }
+ 
+ int Panel::minimumLength() const
+ {
+-    return panelConfig().readEntry("minLength", 0);
++    if (panel()) {
++        return panel()->minimumLength();
++    } else {
++        return panelConfigDefaults().readEntry("minLength", 0);
++    }
+ }
+ 
+ void Panel::setMinimumLength(int pixels)
+ {
+-   panelConfig().writeEntry("minLength", pixels);
+-   if (panel()) {
+-       QMetaObject::invokeMethod(panel(), "restore");
+-   }
++    if (panel()) {
++        panel()->setMinimumLength(pixels);
++    } else {
++        panelConfigDefaults().writeEntry("minLength", pixels);
++    }
+ }
+ 
+ int Panel::maximumLength() const
+ {
+-    return panelConfig().readEntry("maxLength", 0);
++    if (panel()) {
++        return panel()->maximumLength();
++    } else {
++        return panelConfigDefaults().readEntry("maxLength", 0);
++    }
+ }
+ 
+ void Panel::setMaximumLength(int pixels)
+ {
+-   panelConfig().writeEntry("maxLength", pixels);
+-   if (panel()) {
+-       QMetaObject::invokeMethod(panel(), "restore");
+-   }
++    if (panel()) {
++        panel()->setMaximumLength(pixels);
++    } else {
++        panelConfigDefaults().writeEntry("maxLength", pixels);
++    }
+ }
+ 
+ int Panel::height() const
+ {
+-    return panelConfig().readEntry("thickness", 0);
++    if (panel()) {
++        return panel()->thickness();
++    } else {
++        return panelConfigDefaults().readEntry("thickness", 0);
++    }
+ }
+ 
+ void Panel::setHeight(int height)
+ {
+-    panelConfig().writeEntry("thickness", height);
+     if (panel()) {
+-        QMetaObject::invokeMethod(panel(), "restore");
++        panel()->setThickness(height);
++    } else {
++        panelConfigDefaults().writeEntry("thickness", height);
+     }
+ }
+ 
+ QString Panel::hiding() const
+ {
+-    switch (panelConfig().readEntry("panelVisibility", 0)) {
++    int visibility;
++    if (panel()) {
++        visibility = panel()->visibilityMode();
++    } else {
++        visibility = panelConfig().readEntry("panelVisibility", 0);
++    }
++    
++    switch (visibility) {
+         case PanelView::NormalPanel:
+             return "none";
+         case PanelView::AutoHide:
+@@ -244,9 +302,10 @@
+         visibilityMode = PanelView::WindowsGoBelow;
+     }
+ 
+-    panelConfig().writeEntry("panelVisibility", (int)visibilityMode);
+     if (panel()) {
+-        QMetaObject::invokeMethod(panel(), "restore");
++        panel()->setVisibilityMode(visibilityMode);
++    } else {
++        panelConfig().writeEntry("panelVisibility", (int)visibilityMode);
+     }
+ }
+ 
+
